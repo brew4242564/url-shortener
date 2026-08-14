@@ -24,4 +24,3 @@ const urlInput = process.argv[2];
 
 createUrl(urlInput);
 
-
