@@ -1,14 +1,21 @@
 import { supabase } from './services/supabase.js';
+import { nanoid } from 'nanoid';
 
-const createUrl = async(url) =>{
-    if(!url){
+const createUrl = async (url) => {
+    if (!url) {
         console.error("You must enter a URL");
         return;
     }
-    const {data, error} = await supabase.from("URL_SHORTENER").insert([{link: url,}])
-    if(error) {
-        console.error("Error on createURL: ", error.message);
-        return;
+    let inserted = false;
+    while (!inserted) {
+        let code = nanoid(7);
+        const { error } = await supabase.from("URL_SHORTENER").insert([{ link: url, id: code, }])
+        if (!error) inserted = true;
+        // error 23505 is duplicate value in primary key or value with unique constraint.
+        if (error && error.code !== '23505') {
+            console.error("Error on createURL: ", error.message);
+            return;
+        }
     }
     console.log('Sucess');
 }
