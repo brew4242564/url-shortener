@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "short": "node src/cli.js",
-    "server": "node src/server.js"
+    "server": "node src/server.js",
+    "history": "node src/history.js"
   },
   "keywords": [],
   "author": "",

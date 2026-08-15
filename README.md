@@ -32,8 +32,12 @@ pnpm short "https://www.youtube.com/watch?v=aJfRg2Agk0g"
 
 # Wake server
 pnpm server
-```
 
+# View history
+pnpm history # without number, history = 0;
+pnpm history <number of page>
+pnpm history 2
+```
 
 ## Tech Stack
 

@@ -23,8 +23,10 @@ const history = async (page=0) => {
     data.forEach(row => {
         table.push([`${BASE_URL}${row.id}`, row.link, row.created_at]);
     })
+    const maxPages = Math.ceil(count / PAGES);
     console.log(table.toString());
-    console.log(`Página ${page + 1} — mostrando ${data.length} de ${count} links totales`);
+    console.log(`page ${parseInt(page) + 1} of ${maxPages} — viewing ${data.length} of ${count} links`);
 }
-
-history();
+const pageArgv = process.argv[2];
+const page = pageArgv ? parseInt(pageArgv) -1 : 0;
+history(page);
