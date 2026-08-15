@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "create": "node src/cli.js",
+    "short": "node src/cli.js",
     "server": "node src/server.js"
   },
   "keywords": [],
