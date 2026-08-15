@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/cli.js",
-    "runsv": "nodemon src/server.js"
+    "create": "node src/cli.js",
+    "server": "node src/server.js"
   },
   "keywords": [],
   "author": "",
