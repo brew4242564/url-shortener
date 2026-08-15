@@ -25,9 +25,9 @@ CLI URL shortener and Express server for redirecting links.
 
 ```javascript
 # Short Link
-pnpm create "<url>"
+pnpm short "<url>"
 
-pnpm start "https://www.youtube.com/watch?v=aJfRg2Agk0g"
+pnpm short "https://www.youtube.com/watch?v=aJfRg2Agk0g"
 >> https://url-shortener-256o.onrender.com/0iA-GdQ
 
 # Wake server
