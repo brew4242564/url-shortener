@@ -48,7 +48,7 @@ pnpm history 2
 **Database:** Supabase
 
 ## Roadmap
-- Shortened Link History
+- ~~Shortened Link History~~
 - Custom Shortcodes
 - URL Normalizer
 
